@@ -9,12 +9,17 @@ angular.module('video-player')
         this.currentVideo = video;
       }.bind(this);
 
-      this.updateVideos = function (videos) {
-        console.log('inside play this video of app module', videos);
-        this.videos = videos;
+      this.updateCollection = function(data) {
+        this.videos = data;
+        this.currentVideo = this.videos[0];
       }.bind(this);
-      this.querySearch = youTube.querySearch;
-      console.log(this);
+
+      this.updateVideos = function (query) {
+  
+        youTube.querySearch(query, this.updateCollection); 
+        
+      }.bind(this);
+      
     }],
 
     templateUrl: 'src/templates/app.html'
