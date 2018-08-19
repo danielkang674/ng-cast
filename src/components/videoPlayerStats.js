@@ -5,7 +5,6 @@ angular.module('video-player')
     },
     controller: function () {
       // this.likeCount = this.stats;
-      console.log(this.stats);
       // this.viewCount = stats.viewCount;
     },
     templateUrl: 'src/templates/videoPlayerStats.html'

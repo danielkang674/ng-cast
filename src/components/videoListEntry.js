@@ -2,7 +2,7 @@ angular.module('video-player')
   .component('videoListEntry', {
     // TODO
     bindings: {
-      'playThisVideo': '<',
+      'onClick': '<',
       'video': '<'
     },
 
